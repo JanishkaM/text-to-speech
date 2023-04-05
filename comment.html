@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment About My Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/png" href="rock.png">
+    <link href="rock.png" rel="apple-touch-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            text-align: center;
+            font-family: 'Kalam', cursive;
+            font-size: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+        }
+        h1 {
+            font-size: 40px;
+            font-weight: bold;
+            z-index: 2;
+        }
+
+        p {
+            margin: 10px;
+            z-index: 2;
+        }
+        a{
+            text-decoration: none;
+            color: #ff8c09;
+            margin: 10px;
+        }
+
+        form {
+            width: 100%;
+            z-index: 2;
+            background: transparent;
+        }
+
+        input,
+        textarea {
+            font-family: 'Kalam', cursive;
+            font-size: 22px;
+            outline-color: #ff8c09;
+            z-index: 2;
+        }
+
+        input[type="text"] {
+            width: 50%;
+            border: none;
+            border-top: 1px solid #ff8c09;
+            border-bottom: 1px solid #ff8c09;
+            padding: 5px 5px;
+            margin: 20px 10px;
+            text-align: center;
+            background: transparent;
+        }
+
+        textarea {
+            width: 50%;
+            resize: auto;
+            border: none;
+            margin: 5px 10px;
+            border-bottom: 1px solid #ff8c09;
+            border-top: 1px solid #ff8c09;
+            text-align: center;
+            background: transparent;
+        }
+
+        input[type="submit"] {
+            border: none;
+            background-color: #ff8c09;
+            padding: 8px 30px;
+            margin: 20px 10px;
+            border-radius: 12px;
+            color: #fff;
+            font-weight: bold;
+            z-index: 2;
+        }
+        .circle{
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            border-radius: 50px;
+            animation: move 3s infinite alternate;
+            transition: .5s ease;
+            z-index: 1;
+        }
+        .item-1{
+            left: 30%;
+            transform: translate(-50%, -50%);
+            bottom: 0;
+            animation-delay: .2s;
+        }
+        .item-2{
+            left: 50%;
+            transform: translate(-50%, -50%);
+            bottom: 0;
+            animation-delay: .4s;
+        }
+        .item-3{
+            left: 70%;
+            transform: translate(-50%, -50%);
+            bottom: 0;
+            animation-delay: .6s;
+        }
+        @keyframes move {
+            0%{
+                background-color: #ff8800a2;
+                
+            }
+            
+            50%{
+                background-color: #ff88004b;
+            }
+            100%{
+                bottom: 30%;
+                background-color: #ff880000;
+            }
+        }
+        input[type="submit"]:hover {
+            background-color: #ff9e30;
+        }
+
+        @media screen and (max-width: 800px) {
+            input[type="text"], textarea{
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="circle item-1"></div>
+    <div class="circle item-2"></div>
+    <div class="circle item-3"></div>
+    <div class="container">
+        <h1>Add Comment</h1>
+        <p>Tell me about your experiance about this web app and it realy helpful for improve this web app.
+            If find any bug or want any feacher let me know.<br> Thank You.
+        </p>
+        <form action="https://formsubmit.co/sltechfire@gmail.com" method="post">
+            <input type="text" placeholder="Your Name" name="name"><br>
+            <textarea name="message" cols="30" rows="10" placeholder="Your Idea"></textarea><br>
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_next" value="https://simpgames.netlify.app/">
+            <input type="submit">
+        </form>
+        <a href="https://www.flaticon.com/">All Icons form Flaticons</a>
+        <a href="index.html">Back to Voicy</a>
+    </div>
+</body>
+
+</html>

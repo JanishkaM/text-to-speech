@@ -1,12 +1,17 @@
 :root{
-    --header-color: #141414;
-    --font-color: #353535;
+    --header-color: #f3f3f3;
+    --font-color: #e9e9e9;
     --bg-color: #5346e9;
+    --bg-next-color : #a39bf3;
+    --bold-color: #7500c4;
 }
 
 body{
     font-family: 'Poppins', sans-serif;
-    background-color: var(--bg-color);
+    background-image: linear-gradient(to left , var(--bg-color), var(--bg-next-color));
+    box-sizing: border-box;
+    color: var(--font-color);
+    position: relative;
 }
 h1,
 h2,
@@ -18,5 +23,25 @@ h6{
     color: var(--header-color);
 }
 .full-hight{
-    height: 90vh;
+    height: 100%;
+}
+
+textarea, input, select,button{
+    font-size: 18px !important;
+    border: none !important;
+}   
+.popup{
+    position: absolute;
+    width: 100%;
+    height: 100% !important;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 1s ease;
+    background-image: linear-gradient(to left , var(--bg-color), var(--bg-next-color));
+    z-index: 2;
+}
+.popup p{
+    font-size: 20px;
+    line-height: 30px;
 }

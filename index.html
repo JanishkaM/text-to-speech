@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/img/icon.png">
+    <link href="assets/img/logo.png" rel="apple-touch-icon">
     <!-- google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,27 +21,50 @@
 </head>
 
 <body>
-    <div class="container">
-        <h1 class="text-uppercase text-center">Text to Speech</h1>
+    <div class="popup" data-popup>
+        <div class="container text-center d-flex flex-column justify-content-center align-items-center">
+            <h1 class="text-uppercase text-center mt-5 p-1">Welcome to the Text to Speech converter</h1>
+            <p class="p-2">This is a Quick Guide</p>
+            <img src="assets/img/Interface.png" class="img-thumbnail m-2 d-block"><br>
+            <p class="p-2">
+                Select your preferred <b>voice</b>.<br>
+                Adjust speech <b>speed</b> as you like.<br>
+                <b>Get Audio</b> - Start playing text in audio. <br>
+                <b>Pause</b> - Pause audio. <br>
+                <b>Clear Text</b> - Clear all text inside.<br>
+                <b>Stop</b> - Stop all audio. <br>
+            </p>
+            <button class="btn btn-primary mb-5" data-popup-btn>Skip Guide</button>
+        </div>
+    </div>
+    <div class="container mb-5 z-1 d-none" data-app>
+        <h1 class="text-uppercase text-center mt-5">Voicy</h1>
+        <img src="assets/img/logo.png" class="img-fluid mx-auto my-1 d-block" alt="">
         <div class="row d-flex justify-content-center align-items-center full-hight">
-            <div class="col-12 col-md-7 text-center p-5">
-                <button class="btn btn-primary mb-3" data-paste-btn>Paste</button>
+            <div class="col-12 col-md-7 text-center">
+                <button class="btn btn-primary my-3" data-paste-btn>Paste</button>
                 <textarea class="form-control mb-3" name="text-input" id="text-input" cols="30" rows="10"
                     placeholder="Your Text gose Here" data-text-input></textarea>
                 <select class="form-select mb-3" name="voice" id="voice" data-select>
                 </select>
                 <label for="customRange3" class="form-label text-white">Speech Speed</label>
-                <input type="range" class="form-range mb-5" min="0" max="1.5" step="0.2" id="customRange3" data-speed>
-                <button class="btn btn-danger" data-clear-text-btn>Clear text</button>
-                <button class="btn btn-primary" data-submit-text-btn>Get Audio</button>
-                <button class="btn btn-primary" data-pause-voice-btn>Pause</button>
-                <button class="btn btn-primary d-none" data-resume-voice-btn>Resume</button>
-                <div class="result" data-result>
+                <input type="range" class="form-range mb-5" min="0" max="2" step="0.2" id="customRange3" data-speed>
+                <div class="group">
+                    <button class="btn btn-primary m-1" data-submit-text-btn>Get Audio</button>
+                    <button class="btn btn-primary m-1" data-pause-voice-btn>Pause</button>
+                    <button class="btn btn-primary m-1 d-none" data-resume-voice-btn>Resume</button>
+                    <button class="btn btn-danger m-1" data-clear-text-btn>Clear text</button>
+                </div>
+                <div class="group">
+                    <button class="btn btn-danger m-1" data-stop-voice-btn>Stop</button>
                 </div>
             </div>
-
         </div>
     </div>
+    <p class="text-center">
+        Let me know of any bug or any feature improvement you have<br>
+        <a href="comment.html" class="link-info">Send Message</a>
+    </p>
 </body>
 
 </html>
